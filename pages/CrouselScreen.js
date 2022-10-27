@@ -1,12 +1,28 @@
-import { View, Text, FlatList, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, FlatList, StyleSheet, Animated } from 'react-native'
+import React, {useState, useRef} from 'react'
 import slides from '../data/Sildes';
 import CrouselItem from '../pages/CrouselItem';
+import CrouselPages from './CrouselPages';
 
 export default function CrouselScreen() {
+
   return (
     <View style={styles.container}>
-      <FlatList data={slides} renderItem={({item}) => <CrouselItem item={item}/>}/>
+      <View style={{flex: 3}}>
+      <FlatList 
+        data={slides} 
+        renderItem={
+            ({item}) => 
+              <CrouselItem item={item}/>
+        }
+        horizontal
+        showsHorizontalScrollIndicator
+        pagingEnabled
+        bounces={false}
+        snapToAlignment="center"
+        />
+      </View>
+      {/* <CrouselPages data={slides} /> */}
     </View>
   )
 }
