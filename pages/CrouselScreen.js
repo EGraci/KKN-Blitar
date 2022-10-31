@@ -20,6 +20,9 @@ export default function CrouselScreen() {
         pagingEnabled
         bounces={false}
         snapToAlignment="center"
+        panGestureHandlerProps={{
+          activeOffsetX: [-10, 10],
+        }}
         />
       </View>
       {/* <CrouselPages data={slides} /> */}

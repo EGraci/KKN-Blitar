@@ -4,10 +4,10 @@ import React from 'react'
 const CrouselItem = ({item}) => {
     const {width} = useWindowDimensions();
   return (
-    <View style={[styles.container, {width}]}>
+    <View style={[styles.container, {width},  {flexDirection: "column"}]}>
+      <Text style={styles.title}>{item.title}</Text>
       <Image source={item.image} style={[styles.image, {width, resizeMode: 'contain'}]} />
       <View style={{flex: 0.3}}>
-        <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.description}>{item.description}</Text>
       </View>
     </View>
@@ -15,6 +15,7 @@ const CrouselItem = ({item}) => {
 }
 const styles = StyleSheet.create({
     container:{
+      paddingTop: '15%',
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
@@ -24,11 +25,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     title:{
+        flex: 0.1,
+        marginVertical: 1,
+        justifyContent: 'center',
         fontWeight: '800',
         fontSize: 28,
-        marginBottom: 10,
         color: '#493d8a',
         textAlign: 'center',
+
     },
     description:{
         fontWeight: '800',
