@@ -6,7 +6,7 @@ import CrouselPages from './CrouselPages';
 import { Dimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default function CrouselScreen() {
+export default function CrouselScreen({navigation}) {
   const [pageIndex, setPageIndex] = React.useState(0);
   const width = Dimensions.get('window').width;
   const slideRef = useRef(null);
@@ -49,7 +49,7 @@ export default function CrouselScreen() {
         ref={slideRef}
         />
       </View>
-      <CrouselPages data={slides} pageIndex={pageIndex} scrollTo={nextTo} scrollEnd={skipTo}/>
+      <CrouselPages data={slides} pageIndex={pageIndex} scrollTo={nextTo} scrollEnd={skipTo} newScreen={navigation}/>
     </View>
   )
 }
@@ -58,5 +58,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "white",
   }
 });

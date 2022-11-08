@@ -3,7 +3,7 @@ import React from 'react'
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { withTheme } from '@rneui/themed';
 
-export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd}) {
+export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd, newScreen}) {
     
   return (
     <View style={styles.body}>
@@ -17,7 +17,8 @@ export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd}) {
         {
             pageIndex == data.length - 1 ?
                 <View style={styles.pageButton}>
-                    <TouchableOpacity style={{backgroundColor: '#7743DB', flex:1, alignItems: "center", padding: 10,}}>
+                    <TouchableOpacity style={{backgroundColor: '#7743DB', flex:1, alignItems: "center", padding: 10,}} onPress={() =>
+        newScreen.navigate('Scanner', null)}>
                         <Text style={{color: 'white', fontWeight: 'bold'}}>Mulai</Text>
                     </TouchableOpacity>
                 </View>
