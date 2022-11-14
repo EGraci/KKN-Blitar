@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         fontWeight: '800',
         fontSize: 28,
-        color: '#493d8a',
+        color: '#EB6440',
         textAlign: 'center',
 
     },
