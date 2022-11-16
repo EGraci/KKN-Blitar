@@ -1,10 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text } from 'react-native';
+import {globalStyles} from '../styles/Global'
 
-export default function ScannerScreen() {
+
+function ScannerScreen() {
   return (
-    <View>
-      <Text>ScannerScreen</Text>
-    </View>
+    <view>
+        <text>Scanner QR</text>
+    </view>
   )
 }
+export default ScannerScreen

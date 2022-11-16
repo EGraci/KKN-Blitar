@@ -3,7 +3,7 @@ import React from 'react'
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { withTheme } from '@rneui/themed';
 
-export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd, newScreen}) {
+export default function CrouselPages({data, pageIndex, newScreen, scrollEnd}) {
     
   return (
     <View style={styles.body}>
@@ -17,8 +17,7 @@ export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd, newS
         {
             pageIndex == data.length - 1 ?
                 <View style={styles.pageButton}>
-                    <TouchableOpacity style={{backgroundColor: '#7743DB', flex:1, alignItems: "center", padding: 10,}} onPress={() =>
-        newScreen.navigate('Scanner', null)}>
+                    <TouchableOpacity style={{backgroundColor: '#7743DB', flex:1, alignItems: "center", padding: 10,}}>
                         <Text style={{color: 'white', fontWeight: 'bold'}}>Mulai</Text>
                     </TouchableOpacity>
                 </View>
@@ -27,7 +26,8 @@ export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd, newS
                     <TouchableOpacity style={[styles.footerButton, {borderWidth: 1, borderColor: '#7743DB'}]} onPress={scrollEnd} >
                         <Text>Lewati</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.footerButton, {backgroundColor: '#7743DB'}]} onPress={scrollTo}>
+                    <TouchableOpacity style={[styles.footerButton, {backgroundColor: '#7743DB'}]} onPress={() =>
+        newScreen.navigate('Scanner', null)}>
                         <Text style={{color: 'white', fontWeight: 'bold'}}>Lanjut</Text>
                     </TouchableOpacity>
                 </View>
