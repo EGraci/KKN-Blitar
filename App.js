@@ -11,7 +11,7 @@ function App() {
     <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="Onboard" component={CrouselScreen} options={{
-            headerShown: false,
+              headerShown: false,
             orientation: 'portrait',
           }}/>
       <Stack.Screen name="Scanner" component={ScannerScreen} options={{
