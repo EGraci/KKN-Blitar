@@ -5,9 +5,9 @@ import {globalStyles} from '../styles/Global'
 
 function ScannerScreen() {
   return (
-    <view>
-        <text>Scanner QR</text>
-    </view>
+    <View>
+        <Text>Scanner QR</Text>
+    </View>
   )
 }
 export default ScannerScreen
