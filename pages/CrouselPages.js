@@ -1,7 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { withTheme } from '@rneui/themed';
 
 export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd, newScreen}) {
     
@@ -17,9 +15,9 @@ export default function CrouselPages({data, pageIndex, scrollTo, scrollEnd, newS
         {
             pageIndex == data.length - 1 ?
                 <View style={styles.pageButton}>
-                    <TouchableOpacity style={{backgroundColor: '#7743DB', flex:1, alignItems: "center", padding: 10,}} onPress={() =>
+                    <TouchableOpacity style={{backgroundColor: '#7743DB', flex:1, alignItems: "center", padding: 10, borderRadius: 10,}} onPress={() =>
         newScreen.navigate('Scanner', null)}>
-                        <Text style={{color: 'white', fontWeight: 'bold'}}>Mulai</Text>
+                        <Text style={{color: 'white', fontWeight: 'bold',}}>Mulai</Text>
                     </TouchableOpacity>
                 </View>
             :
@@ -41,34 +39,44 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     }, 
+
     body:{
-        flex: 1, 
+        marginBottom: 30,
         width: "100%",
         flexDirection: 'column',
-        position: 'absolute',
-        bottom: 20,
     },
+
     paggingBar:{
+        marginBottom: 20,
         flexDirection: 'row',
         justifyContent: "center",
     },
+
     paggingItem:{
-        height: 2.5,
+        height: 3,
         width: 20,
         backgroundColor: '#7743DB',
         marginHorizontal: 8,
         borderRadius: 2,
     },
+
     pageButton:{
-        top: 10,
+        marginTop: 20,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
+        paddingHorizontal: 20,
+        
     },
+
     footerButton:{
+        borderRadius: 10,
+        marginRight: 10,
+        marginLeft: 10,
         flex:0.5,
         alignItems: "center",
         padding: 10,
     }
+
   });

@@ -1,10 +1,10 @@
-import { View, Text, FlatList, StyleSheet, Animated } from 'react-native'
+import { View, Text, FlatList, StyleSheet } from 'react-native'
 import React, { useRef } from 'react';
 import slides from '../data/Sildes';
 import CrouselItem from '../pages/CrouselItem';
 import CrouselPages from './CrouselPages';
 import { Dimensions } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+
 
 export default function CrouselScreen({navigation}) {
   const [pageIndex, setPageIndex] = React.useState(0);

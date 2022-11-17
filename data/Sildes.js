@@ -2,19 +2,19 @@ export default[
     {
         id : '1',
         title : 'Slide 1',
-        description : 'Tutor 1',
-        image: require('../assets/crousel/undraw_learning_sketching_nd4f.png'),
+        description : 'Aplikasi ini menyediakan berbagai cerita legenda Indonesia dari Sabang hingga Merauke.',
+        image: require('../assets/crousel/garuda.png'),
     },
     {
         id : '2',
         title : 'Slide 2',
-        description : 'Tutor 2',
-        image: require('../assets/crousel/undraw_Home_screen_re_640d.png'),
+        description : 'Aplikasi ini menyediakan berbagai cerita legenda Indonesia dari Sabang hingga Merauke.',
+        image: require('../assets/crousel/garuda1.png'),
     },
     {
         id : '3',
         title : 'Slide 3',
-        description : 'Tutor 3',
-        image: require('../assets/crousel/undraw_Reminder_re_fe15.png'),
+        description : 'Aplikasi ini menyediakan berbagai cerita legenda Indonesia dari Sabang hingga Merauke.',
+        image: require('../assets/crousel/bungtomo.png'),
     },
 ];
