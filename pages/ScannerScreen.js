@@ -18,7 +18,15 @@ function ScannerScreen() {
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    data = data.split(",");
+    if(data.length == 2){
+      let pahlawan = data[0];
+      let tipe = data[1];
+      alert(`Nama Pahawan : ${pahlawan} Tipe ${tipe} `);
+    }else{
+      alert('QR Code tidak dikenali \n silahkan scan QR Code lain');
+    }
+    
   };
 
   if (hasPermission === null) {
