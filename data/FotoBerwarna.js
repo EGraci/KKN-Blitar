@@ -12,7 +12,7 @@ export default[
     {
         id : 3,
         title : 'Bung Tomo',
-        image: require('../assets/fotoberwarna/bungtomo1.jpg'),
+        image: require('../assets/fotoberwarna/bungtomo1.png'),
     },
     {
         id : 4,
@@ -22,7 +22,7 @@ export default[
     {
         id : 5,
         title : 'Ir. Soekarno',
-        image: require('../assets/fotoberwarna/irsoekarno1.jpg'),
+        image: require('../assets/fotoberwarna/irsoekarno1.png'),
     },
     {
         id : 6,

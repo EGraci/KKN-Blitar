@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button , Alert} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-
 function ScannerScreen({navigation}) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
@@ -23,7 +22,6 @@ function ScannerScreen({navigation}) {
         pahlawan: data[0],
         tipe: data[1],
       });
-
     }else{
       setScanned(true);
       Alert.alert(
