@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Text, View, StyleSheet, Button , Alert} from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
 
-function ScannerScreen() {
+function ScannerScreen({navigation}) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
 
@@ -17,14 +17,25 @@ function ScannerScreen() {
   }, []);
 
   const handleBarCodeScanned = ({ type, data }) => {
-    setScanned(true);
     data = data.split(",");
     if(data.length == 2){
-      let pahlawan = data[0];
-      let tipe = data[1];
-      alert(`Nama Pahawan : ${pahlawan} Tipe ${tipe} `);
+      navigation.navigate('Preview', {
+        pahlawan: data[0],
+        tipe: data[1],
+      });
+
     }else{
-      alert('QR Code tidak dikenali \n silahkan scan QR Code lain');
+      setScanned(true);
+      Alert.alert(
+        'QR Code tidak dikenali',
+        'silahkan scan QR Code lain',
+        [
+          {text: 'Ok', onPress: () => setScanned(false)},
+        ],
+        { 
+          cancelable: true 
+        }
+      );
     }
     
   };
@@ -42,7 +53,7 @@ function ScannerScreen() {
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         style={StyleSheet.absoluteFillObject}
       />
-      {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
+      {scanned && <Button title={'Tap untuk scan ulang'} onPress={() => setScanned(false)} />}
     </View>
   );
 }

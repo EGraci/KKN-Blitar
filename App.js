@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CrouselScreen from './pages/CrouselScreen';
 import ScannerScreen from './pages/ScannerScreen';
+import PreviewScreen from './pages/PreviewScreen';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -14,7 +15,8 @@ export default function App() {
           }}/>
       <Stack.Screen name="Scanner" component={ScannerScreen} options={{
               headerShown: false,
-            }}/>      
+            }}/>
+      <Stack.Screen name="Preview" component={PreviewScreen} />           
     </Stack.Navigator>
   </NavigationContainer>
   );
