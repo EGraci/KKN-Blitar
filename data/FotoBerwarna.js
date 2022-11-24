@@ -32,7 +32,7 @@ export default[
     {
         id : 7,
         title : 'Martha Christina Tiahahu',
-        image: require('../assets/fotoberwarna/martha1.jpg'),
+        image: require('../assets/fotoberwarna/martha1.png'),
     },
     {
         id : 8,
