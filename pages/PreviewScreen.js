@@ -12,7 +12,7 @@ export default function PreviewScreen({navigation, route}) {
       <View style={styles.container}>
         <Button title={'Kembali ke Scan'} onPress={() => navigation.navigate('Onboard', null)} />
         
-        <Text> dengan tipe {tipe}</Text>
+        <Text> dengan tipe {tipe} dengan nama pahlawan {pahlawan}</Text>
        
       </View>
     )
