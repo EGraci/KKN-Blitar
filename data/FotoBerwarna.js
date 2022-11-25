@@ -2,12 +2,12 @@ export default[
     {
         id : 1,
         title : 'Agus Salim',
-        image: require('../assets/fotoberwarna/agussalim1.jpg'),
+        image: require('../assets/fotoberwarna/agussalim1.png'),
     },
     {
         id : 2,
         title : 'Ahmad Yani',
-        image: require('../assets/fotoberwarna/ahmadyani1.jpg'),
+        image: require('../assets/fotoberwarna/ahmadyani1.png'),
     },
     {
         id : 3,
@@ -17,7 +17,7 @@ export default[
     {
         id : 4,
         title : 'Cut Nyak Dien',
-        image: require('../assets/fotoberwarna/cutnyakdien1.jpg'),
+        image: require('../assets/fotoberwarna/cutnyakdien1.png'),
     },
     {
         id : 5,
@@ -27,7 +27,7 @@ export default[
     {
         id : 6,
         title : 'Ki Hadjar Dewantara',
-        image: require('../assets/fotoberwarna/kihadjardewantara1.jpg'),
+        image: require('../assets/fotoberwarna/kihadjardewantara1.png'),
     },
     {
         id : 7,
@@ -37,36 +37,36 @@ export default[
     {
         id : 8,
         title : 'Mohammad Hatta',
-        image: require('../assets/fotoberwarna/mohhatta1.jpg'),
+        image: require('../assets/fotoberwarna/mohhatta1.png'),
     },
     {
         id : 9,
         title : 'Muhammad Yamin',
-        image: require('../assets/fotoberwarna/muhyamin1.jpg'),
+        image: require('../assets/fotoberwarna/muhyamin1.png'),
     },
     {
         id : 10,
         title : 'Raden Ajeng Kartini',
-        image: require('../assets/fotoberwarna/rakartini1.jpg'),
+        image: require('../assets/fotoberwarna/rakartini1.png'),
     },
     {
         id : 11,
         title : 'Wage Rudolf Supratman',
-        image: require('../assets/fotoberwarna/rudolf1.jpg'),
+        image: require('../assets/fotoberwarna/rudolf1.png'),
     },
     {
         id : 12,
         title : 'Raden Soedirman',
-        image: require('../assets/fotoberwarna/soedirman1.jpg'),
+        image: require('../assets/fotoberwarna/soedirman1.png'),
     },
     {
         id : 13,
         title : 'Sutan Syahrir',
-        image: require('../assets/fotoberwarna/syahrir1.jpg'),
+        image: require('../assets/fotoberwarna/syahrir1.png'),
     },
     {
         id : 14,
         title : 'HOS Tjokroaminoto',
-        image: require('../assets/fotoberwarna/tjokroaminoto1.jpg'),
+        image: require('../assets/fotoberwarna/tjokroaminoto1.png'),
     },
 ]
