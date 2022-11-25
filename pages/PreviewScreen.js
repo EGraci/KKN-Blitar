@@ -6,7 +6,7 @@ import FotoHp from '../data/FotoHp';
 
 export default function PreviewScreen({navigation, route}) {
     const { pahlawan, tipe } = route.params;
-    const data = FotoBerwarna.find(el => el.title.includes === pahlawan);
+    const data = FotoBerwarna.find(el => el.title === pahlawan);
     console.debug(data);
     return (
       <View style={styles.container}>
