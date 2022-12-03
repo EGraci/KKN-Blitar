@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button , Alert} from 'react-native';
-import { BarCodeScanner } from 'expo-barcode-scanner';
+import React, { useState, useEffect } from "react";
+import { Text, View, StyleSheet, Button, Alert } from "react-native";
+import { BarCodeScanner } from "expo-barcode-scanner";
 
-function ScannerScreen({navigation}) {
+function ScannerScreen({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
 
   useEffect(() => {
     const getBarCodeScannerPermissions = async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
-      setHasPermission(status === 'granted');
+      setHasPermission(status === "granted");
     };
 
     getBarCodeScannerPermissions();
@@ -17,25 +17,22 @@ function ScannerScreen({navigation}) {
 
   const handleBarCodeScanned = ({ type, data }) => {
     data = data.split(",");
-    if(data.length == 2){
-      navigation.navigate('Preview', {
+    if (data.length == 2) {
+      navigation.navigate("Preview", {
         pahlawan: data[0],
         tipe: data[1],
       });
-    }else{
+    } else {
       setScanned(true);
       Alert.alert(
-        'QR Code tidak dikenali',
-        'silahkan scan QR Code lain',
-        [
-          {text: 'Ok', onPress: () => setScanned(false)},
-        ],
-        { 
-          cancelable: true 
+        "QR Code tidak dikenali",
+        "Silahkan scan QR Code lain",
+        [{ text: "Ok", onPress: () => setScanned(false) }],
+        {
+          cancelable: true,
         }
       );
     }
-    
   };
 
   if (hasPermission === null) {
@@ -51,17 +48,22 @@ function ScannerScreen({navigation}) {
         onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         style={StyleSheet.absoluteFillObject}
       />
-      {scanned && <Button title={'Tap untuk scan ulang'} onPress={() => setScanned(false)} />}
+      {scanned && (
+        <Button
+          title={"Tap untuk scan ulang"}
+          onPress={() => setScanned(false)}
+        />
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-  }
+  },
 });
-export default ScannerScreen
+export default ScannerScreen;

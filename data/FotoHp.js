@@ -69,4 +69,9 @@ export default [
     title: "HOS Tjokroaminoto",
     image: require("../assets/fotohp/tjokroaminoto2.png"),
   },
+  {
+    id: 15,
+    title: "Abdul Haris Nasution",
+    image: require("../assets/fotohp/abdulharis2.png"),
+  },
 ];
