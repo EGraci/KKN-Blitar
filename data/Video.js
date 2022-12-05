@@ -1,14 +1,14 @@
 export default [
   {
     id: 1,
-    title: "Agus Salim",
-    image: require("../assets/video/agussalim-video.mp4"),
+    title: "Agus Salim", // dari QR Code
+    image: require("../assets/video/agussalim-video.mp4"), //dari local asset video
   },
-  // {
-  //   id: 2,
-  //   title: "Ahmad Yani",
-  //   image: require("../assets/video/ahmadyani1.png"),
-  // },
+  {
+    id: 2,
+    title: "Ahmad Yani",
+    image: require("../assets/video/ahmadyani-video.mp4"),
+  },
   {
     id: 3,
     title: "Bung Tomo",
@@ -22,7 +22,7 @@ export default [
   {
     id: 5,
     title: "Ir. Soekarno",
-    image: require("../assets/video/soekarno-video"),
+    image: require("../assets/video/soekarno-video.mp4"),
   },
   {
     id: 6,
@@ -32,12 +32,12 @@ export default [
   {
     id: 7,
     title: "Martha Christina Tiahahu",
-    image: require("../assets/video/martha-video"),
+    image: require("../assets/video/martha-video.mp4"),
   },
   {
     id: 8,
     title: "Mohammad Hatta",
-    image: require("../assets/video/mohhatta-video.mp4"),
+    image: require("../assets/video/hatta-video.mp4"),
   },
   {
     id: 9,
@@ -69,9 +69,9 @@ export default [
     title: "HOS Tjokroaminoto",
     image: require("../assets/video/tjokroaminoto-video.mp4"),
   },
-  // {
-  //   id: 15,
-  //   title: "Abdul Haris Nasution",
-  //   image: require("../assets/video/abdulharis1.png"),
-  // },
+  {
+    id: 15,
+    title: "Abdul Haris Nasution",
+    image: require("../assets/video/ah-nasution-video.mp4"),
+  },
 ];
