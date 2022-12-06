@@ -105,3 +105,6 @@ web-build/
 dist/
 
 # @end expo-cli
+
+# asset video
+asset/video/

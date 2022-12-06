@@ -57,7 +57,7 @@ export default [
   {
     id: 12,
     title: "Raden Soedirman",
-    image: require("../assets/video/soedirman-video.mp4"),
+    image: require("../assets/video/soedirman.mp4"),
   },
   {
     id: 13,
