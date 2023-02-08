@@ -1,6 +1,15 @@
 # installasion extension
-``` yarn install```
+
+` yarn install`
 <b>or</b>
-``` yarn ```
+`yarn`
+
 # Run Program
-``` yarn start ```
+
+`yarn start`
+
+# Support JDK > 15
+
+# JAVA_HOME /java
+
+# Path /java.../bin
