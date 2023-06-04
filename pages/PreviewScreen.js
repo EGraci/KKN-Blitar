@@ -1,18 +1,34 @@
-import {View, Text, Button, StyleSheet, Image, useWindowDimensions} from "react-native";
-import React, { useRef } from "react";
-import { Video, AVPlaybackStatus } from 'expo-av';
+import {View, Text, Button, StyleSheet, Image, ImageBackground, useWindowDimensions, BackHandler} from "react-native";
+import React, { useRef, useEffect} from "react";
+import { Video, AVPlaybackStatus } from 'expo-av';  
+import * as FileSystem from 'expo-file-system';
+import * as DocumentPicker from 'expo-document-picker';
 import FotoBerwarna from "../data/FotoBerwarna";
 import FotoHp from "../data/FotoHp";
 import video from "../data/Video";
 
 export default function PreviewScreen({ navigation, route }) {
   const { pahlawan, tipe } = route.params;
-  // console.debug(data);
   const {width} = useWindowDimensions();
   const play = React.useRef(null);
   const [status, setStatus] = React.useState({});
+
+  useEffect(() => {
+    const backAction = () => {
+      navigation.navigate("Onboard");
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
+    return () => backHandler.remove();
+  }, []);
+
   return (
     <View style={{flex:1}}>
+      
       {
             (() => {
                 if(tipe.includes('clr')){
@@ -25,8 +41,8 @@ export default function PreviewScreen({ navigation, route }) {
                     const data = FotoHp.find(el => el.title == pahlawan);
                     return(
                     <View style={styles.container}>
-                      <Image source={data.image} style={[styles.image, {width, resizeMode: 'contain'  }]} />
-                    </View>);
+                      <Image source={data.image} style={[styles.image, {width, resizeMode: 'contain'}]} />
+                    </View>);   
                 }else{
                   const data = video.find(el => el.title == pahlawan);
                     return(
@@ -39,14 +55,7 @@ export default function PreviewScreen({ navigation, route }) {
                           resizeMode="contain"
                           isLooping
                           onPlaybackStatusUpdate={status => setStatus(() => status)}
-                        />
-                        {/* {
-                          status.isPlaying ? '' : (<Button
-                            title={"Kembali ke Scan"}
-                            onPress={() => navigation.navigate("Onboard", null)}
-                          />)
-                        } */}
-                        
+                        />                        
                       </View>
                     );
                 }
@@ -79,5 +88,13 @@ const styles = StyleSheet.create({
     right: 0,
     backgroundColor: 'black',
     justifyContent: 'center',
+  },
+  buttonImageIconStyle: {
+    justifyContent: "center",
+    padding: 10,
+    margin: 5,
+    height: 25,
+    width: 25,
+    resizeMode: 'stretch',
   },
 });
