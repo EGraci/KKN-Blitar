@@ -14,11 +14,11 @@ export default [
     title: "Bung Tomo",
     image: require("../assets/fotoberwarna/bungtomo1.png"),
   },
-  {
-    id: 4,
-    title: "Cut Nyak Dien",
-    image: require("../assets/fotoberwarna/cutnyakdien1.png"),
-  },
+  // {
+  //   id: 4,
+  //   title: "Cut Nyak Dien",
+  //   image: require("../assets/fotoberwarna/cutnyakdien1.png"),
+  // },
   {
     id: 5,
     title: "Ir. Soekarno",
