@@ -66,7 +66,6 @@ export default function PreviewScreen({ navigation, route }) {
                 source={data.image}
                 useNativeControls
                 resizeMode="contain"
-                isLooping
                 onPlaybackStatusUpdate={(status) => setStatus(() => status)}
               />
             </View>
